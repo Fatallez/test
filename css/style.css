@@ -1,0 +1,36 @@
+.test {
+    display: flex;
+}
+
+.text {
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.draw_command {
+    width: 387px;
+    padding: 5px;
+    display: block;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.buttons {
+    width: 441px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.draw_btn {
+    display: block;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.canvas {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    margin-left: 40px;
+    margin-top: 10px;
+}

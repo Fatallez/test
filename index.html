@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="test">
+        <div>
+            <form class="draw" onsubmit="return false;">
+                <input type="text" class="draw_command" placeholder="Введите комманду для отрисовки">
+                <div class="buttons">
+                    <button class="draw_btn" onclick="draw()">Рисовать</button>
+                    <button class="draw_btn" onclick="clearCanvas()">Очистить</button>
+                </div>
+            </form>
+            <canvas class="canvas" width="400px" height="400px"></canvas>
+        </div>
+        <div class="text">
+            <h2>Доступные фигуры:</h2>
+            <ul>
+                <li>line</li>
+                <li>rectangle</li>
+                <li>triangle</li>
+                <li>circle</li>
+                <li>ellipse</li>
+            </ul>
+            <h2>Доступные опции:</h2>
+            <ul>
+                <li>Для отрисовки нескольких фигур за раз используйте разделитель "&"</li>
+                <li>"-p" - координаты точек в формате [x1, y1] [x2, y2]</li>
+                <li>"-c" - цвет линии (rgb, rgba, hsl)</li>
+                <li>"-b" - цвет фона (rgb, rgba, hsl)</li>
+                <li>"-w" - толщина линии</li>
+                <li>"-r" - радиус (только для круга)</li>
+                <li>"-r1" и "-r2" - радиусы (только для эллипса)</li>
+            </ul>
+            <h3>Например:</h3>
+            <ul>
+                <li>rectangle -p [50, 50] [100, 100] -c lightblue -b rgba(255, 0, 0, 0.3) -w 5 & triangle -p [50, 50] [50, 100] [100, 100] -c #42d2eb -b rgba(232, 235, 66, 0.3)</li>
+                <li>circle -p [75, 75] -r 25 -c rgb(255, 0, 0) -b rgba(0, 255, 0, 0.3)</li>
+            </ul>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
